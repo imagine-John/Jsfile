@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="all">
+		<input type="text" class="int" value="3,3,4,6">
+		<button class="btn">求和</button>
+		<br>
+		<span class="spn"></span>
+	</div>
+	<script>
+	var int=document.getElementsByClassName("int")[0]
+	var btn=document.getElementsByClassName("btn")[0]
+	var spn=document.getElementsByClassName("spn")[0]
+	btn.onclick=function(){
+		var val=int.value.split(",")
+		//console.log(val)
+		var sum=0 
+		for(var i=0;i<val.length;i++){
+			sum+=parseInt(val[i])
+		}
+		spn.innerHTML=sum
+	}
+	</script>
+</body>
+</html>
