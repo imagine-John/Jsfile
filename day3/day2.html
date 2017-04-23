@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" style="width:40px" class="int1">
+	<span>+</span>
+	<input type="text" style="width: 40px" class="int2">
+	<span>=</span>
+	<span class="text">?</span>
+	<button id="btn">求和</button>
+	<script>
+	var int1=document.getElementsByTagName("input")
+
+	var text=document.getElementsByClassName("text")[0]
+	var btn=document.getElementById("btn")
+	for (i = 0; i < int1.length - 1; i++)
+		{
+			int1[i].onkeyup = function ()
+			{
+				this.value = this.value.replace(/[^\d]/,"")
+			}	
+		}
+
+	btn.onclick=function(){
+		//console.log(int1[0].value)
+		if(int1[0].value=='' || int1[1].value==''){
+			alert("请输入数字")
+		} else{
+			var val=parseInt(int1[0].value)+parseInt(int1[1].value)
+			text.innerHTML=val
+		}
+		
+	}
+	</script>
+</body>
+</html>

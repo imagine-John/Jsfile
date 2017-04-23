@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+body,div,h2,ul,li{margin:0;padding:0;}
+body{font:12px/1.5 Tahoma;}
+ul{list-style-type:none;}
+#all{width:560px;border:1px solid #333;margin:10px auto;padding:0 0 10px 10px;}
+#all h2{line-height:30px;text-align:center;margin-top:10px;}
+#all ul:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#all ul{zoom:1;}
+#all ul li{position:relative;float:left;border:1px solid #333;margin:10px 10px 0 0;display:inline;}
+#all ul li img{position:absolute;top:-14px;left:-14px;display:none;border:2px solid #999;cursor:crosshair;}
+#all ul li a{color:#666;width:80px;height:80px;display:block;background:#f0f0f0;text-decoration:none;padding:10px;}
+#all ul li a strong{display:block;}
+.zindex{z-index:1;}
+</style>
+<body>
+	<div id="all">
+    <h2>名车车标展示-鼠标移过显示车标</h2>
+    <ul>
+        <li>
+            <a href="javascript:;" title="BMW 宝马汽车"><strong>BMW</strong>宝马汽车</a>
+            <img src="http://www.fgm.cc/learn/lesson2/img/1.jpg" alt="BMW 宝马汽车" />
+        </li>
+        <li>
+            <a href="javascript:;" title="Alfa Romeo 阿尔法-罗米欧"><strong>Alfa Romeo</strong> 阿尔法-罗米欧</a>
+            <img src="http://www.fgm.cc/learn/lesson2/img/2.jpg" alt="Alfa Romeo 阿尔法-罗米欧" />
+        </li>
+        <li>
+            <a href="javascript:;" title="Skoda 斯柯达"><strong>Skoda</strong> 斯柯达</a>
+            <img src="http://www.fgm.cc/learn/lesson2/img/3.jpg" alt="Skoda 斯柯达" />
+        </li>
+        <li>
+            <a href="javascript:;" title="Volkswagen 大众汽车"><strong>Volkswagen</strong> 大众汽车</a>
+            <img src="http://www.fgm.cc/learn/lesson2/img/4.jpg" alt="Volkswagen 大众汽车" />
+        </li>
+        <li>
+            <a href="javascript:;" title="Saab 萨布牌轿"><strong>Saab</strong> 萨布牌轿车</a>
+            <img src="http://www.fgm.cc/learn/lesson2/img/5.jpg" alt="Saab 萨布牌轿" />
+        </li>
+        <li>
+            <a href="javascript:;" title="Lamborghini 兰博基尼"><strong>Lamborghini</strong> 兰博基尼</a>
+            <img src="http://www.fgm.cc/learn/lesson2/img/6.jpg" alt="Lamborghini 兰博基尼" />
+        </li>
+       
+       
+    </ul>
+	<script>
+	var all=document.getElementById("all")
+	var as=document.getElementsByTagName("a")
+	var imgs=document.getElementsByTagName("img")
+    for (var i = 0; i < 5; i++) {
+
+        setTimeout(function() {
+
+            console.log(new Date, i);
+
+        }, 1000);
+
+    }
+
+     
+
+    console.log(new Date, i);
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+		font-size: 12px;
+		display: block;
+
+	}
+	#all{
+		width: 200px;
+		margin: 10px auto;
+		border:1px solid #aaa;
+		padding: 1px;
+	}
+	#all h2{
+		height: 30px;
+		line-height: 30px;
+		
+		background: #ccc;
+		font-size: 14px;
+		background: #ced3d7 url(http://www.fgm.cc/learn/lesson2/img/ico.gif) 180px 15px no-repeat
+
+	}
+	#all ul li{
+	
+		height: 30px;
+		line-height: 30px;
+		background: #eee;
+
+	}
+	#all a:hover{background:#fff;text-decoration:underline;}
+	#all h2.open{background-position:180px -12px;}
+</style>
+<body>
+	<div id="all">
+		 <h2>播放列表...</h2>
+    <ul>
+        <li><a href="javascript:;">玩家之徒 - 蔡依林</a></li>
+        <li><a href="javascript:;">原谅我就是这样的女生 - 戴佩妮</a></li>
+        <li><a href="javascript:;">猜不透 - 丁当</a></li>
+        <li><a href="javascript:;">自导自演 - 周杰伦</a></li>
+        <li><a href="javascript:;">浪漫窝 - 弦子</a></li>
+        <li><a href="javascript:;">流年 - 王菲</a></li>
+    </ul>
+	</div>
+	<script>
+	var hs=document.getElementById("all").getElementsByTagName("h2")[0]
+
+	var uls=document.getElementById("all").getElementsByTagName("ul")[0]
+	hs.onclick=function(){
+			uls.style.display=uls.style.display=="block"?"none":"block"
+			hs.className = uls.style.display == "none" ? "open" : ""
+	}
+	</script>
+</body>
+</html>
