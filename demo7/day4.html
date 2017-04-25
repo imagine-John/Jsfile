@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		text-align: center;
+	}
+</style>
+<body>
+	<input type="text" style="width: 40px">
+	<span> vs </span>
+	<input type="text" style="width: 40px">
+	<input type="button" value="最大的数是>>" id="btn">=
+	<span class="text">?</span>
+	<script>
+	var int=document.getElementsByTagName("input")
+	var text=document.getElementsByClassName("text")[0]
+	var btn=document.getElementById("btn")
+
+	for(var i=0;i<int.length-1;i++){
+		int[i].onkeyup=function(){
+			this.value=this.value.replace(/[^\d]/,"")
+
+		}
+	}
+	btn.onclick=function(){
+		/*if(parseInt(int[0].value)>parseInt(int[1].value)){
+			alert(1)
+		}*/
+		if(int[0].value=="" || int[1].value==""){
+			alert("请输入数字")
+		}else{
+
+			text.innerHTML=Math.max(parseInt(int[0].value),parseInt(int[1].value))
+		}
+		
+	}
+	
+	</script>
+</body>
+</html>
