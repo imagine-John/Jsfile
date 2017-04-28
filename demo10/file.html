@@ -39,9 +39,46 @@
 	}
 	int[2].onclick=function(){
 		arr=getArray(aDiv[1].innerHTML)
-		aDiv[1].innerHTML=arr.concat(arr).toString()
+		aDiv[1].innerHTML=arr.concat(arr).toString().replace(/\s/g,"")
+	}
+	//还原
+	int[3].onclick=function(){
+		var arr = getArray(aDiv[1].innerHTML)
+		arr.length=10;
+		aDiv.innerHTML=arr.join()
 	}
 
+	//第三组数据还原
+	int[4].onclick=function(){
+		arr=["red","green","blue","white","yellow","black","brown"]
+		aDiv[2].innerHTML=arr.join()
+		console.log(arr.join())
+	}
+
+	//删除前三项
+	int[5].onclick=function(){
+		arr=getArray(aDiv[2].innerHTML)
+		arr.splice(0,3)
+		aDiv.innerHTML=arr.join()
+	}
+	//删除第二项至第三项
+	int[6].onclick=function(){
+		arr=getArray(aDiv[2].innerHTML)
+		arr.splice(1,2)
+		aDiv[2].innerHTML=arr.join()
+	}
+	//在第二项后插入"orange,purple"
+	int[7].onclick=function(){
+		arr=getArray(aDiv[2].innerHTML)
+		arr.splice(1,0,"orange","purple")
+		aDiv[2].innerHTML=arr.join()
+	}
+	//替换第二项和第三项
+	int[8].onclick=function(){
+		arr=getArray(aDiv[2].innerHTML)
+		arr.splice(1,2,"替换1","替换2")
+		aDiv[2].innerHTML=arr.join()
+	}
 
 	//innerHTML转换数组
 	function getArray(str){
