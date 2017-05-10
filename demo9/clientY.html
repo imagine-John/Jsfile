@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>点击任意地方弹出坐标</p>
+	<script>
+	document.onclick=function(){
+		var event=event || window.event;
+		alert("坐标：["+event.clientX+","+event.clientY+"]")
+	}
+	</script>
+</body>
+</html>
